@@ -1,0 +1,235 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThunderTV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .announcement-bar {
+            background-color: #FFA500;
+            color: #000;
+            font-weight: bold;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .announcement-bar span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll 30s linear infinite;
+            font-size: 1.2rem;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        header {
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        header h1 span {
+            color: white;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #b3b3b3;
+        }
+
+        .header-image {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .header-image img {
+            width: 600px;
+            border: 2px solid white;
+            border-radius: 8px;
+        }
+
+        .top-left-logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .top-left-logo img {
+            width: 100px;
+            border-radius: 8px;
+        }
+
+        .contact-image {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .contact-image img {
+            max-width: 300px;
+            border-radius: 8px;
+        }
+
+        /* Pricing card styles */
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1;
+            max-width: 350px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .card:nth-child(1) {
+            background-color: rgba(30, 64, 175, 0.2); /* Blue tint */
+        }
+
+        .card:nth-child(2) {
+            background-color: rgba(5, 150, 105, 0.2); /* Green tint */
+        }
+
+        .card:nth-child(3) {
+            background-color: rgba(180, 83, 9, 0.2); /* Orange tint */
+        }
+
+        .recommended-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #FFA500;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+        <div class="announcement-bar">
+        <span>THUNDER TV, ENTRETENIMIENTO FAMILIAR Y DE ADULTOS A SEGÚN LO SOLICITE EN SU COMPRA, SOLICITA PRUEBA SIN COMPROMISO AL WHATSAPP O POR TELEGRAM.</span>
+    </div>
+
+        <header>
+        <div class="top-left-logo">
+            <a href='https://postimg.cc/xXD4Ktx2' target='_blank'>
+                <img src='https://i.postimg.cc/P5Pnn71P/Picsart-24-12-04-21-08-23-474.png' alt='ThunderTV Logo'/>
+            </a>
+        </div>
+        <h1>Thunder<span>TV</span></h1>
+        <p>La mejor experiencia en entretenimiento</p>
+        <div class="header-image">
+            <a href="https://postimg.cc/f3fvxkKM" target="_blank">
+                <img src="https://i.postimg.cc/f3fvxkKM/Picsart-24-07-25-09-05-34-026.gif" alt="Picsart Animation">
+            </a>
+        </div>
+    </header>
+
+        <main class="p-8">
+                <section class="pricing-section mb-8">
+            <h2 class="text-yellow-500 text-3xl text-center mb-4">PLANES-MENSUALIDAD</h2>
+            <div class="pricing-cards">
+                                <div class="card p-6 rounded-lg text-center mb-4 shadow-lg">
+                    <h3 class="text-yellow-500 text-2xl mb-2">BÁSICO</h3>
+                    <p class="text-xl font-bold mb-2">6$ USD</p>
+                    <p>1 dispositivo</p>
+                    <p>Canales SD, HD y FHD</p>
+                    <p>Series y Películas</p>
+                    <p>Canales para adultos</p>
+                    <p>Canales y eventos PPV</p>
+                    <div class="wompi_button_widget" data-url-pago="https://lk.wompi.sv/hSka"></div>
+                    <p class="text-sm text-gray-400 mt-2">Pago seguro con 3DS</p>
+                </div>
+                                <div class="card p-6 rounded-lg text-center mb-4 shadow-lg">
+                    <div class="recommended-badge">Recomendado</div>
+                    <h3 class="text-yellow-500 text-2xl mb-2">STANDARD</h3>
+                    <p class="text-xl font-bold mb-2">8$ USD</p>
+                    <p>3 dispositivos</p>
+                    <p>Canales SD, HD y FHD</p>
+                    <p>Series y Películas</p>
+                    <p>Canales para adultos</p>
+                    <p>Canales y eventos PPV</p>
+                    <div class="wompi_button_widget" data-url-pago="https://lk.wompi.sv/hSka"></div>
+                    <p class="text-sm text-gray-400 mt-2">Pago seguro con 3DS</p>
+                </div>
+                                <div class="card p-6 rounded-lg text-center mb-4 shadow-lg">
+                    <h3 class="text-yellow-500 text-2xl mb-2">FULL PREMIUM</h3>
+                    <p class="text-xl font-bold mb-2">11$ USD</p>
+                    <p>4 dispositivos</p>
+                    <p>Canales SD, HD y FHD</p>
+                    <p>Series y Películas</p>
+                    <p>Canales para adultos</p>
+                    <p>Canales y eventos PPV</p>
+                    <div class="wompi_button_widget" data-url-pago="https://lk.wompi.sv/hSka"></div>
+                    <p class="text-sm text-gray-400 mt-2">Pago seguro con 3DS</p>
+                </div>
+            </div>
+        </section>
+
+                <section class="contact-section mb-8">
+            <h2 class="text-yellow-500 text-3xl text-center mb-4">Contactos</h2>
+            <div class="contact-buttons flex flex-col items-center gap-4">
+                <div class="flex gap-4">
+                    <a href="https://wa.me/+639302957535" target="_blank" class="py-2 px-4 rounded-lg flex items-center gap-2 bg-green-500 text-white hover:bg-green-600">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="https://t.me/dev0TH" target="_blank" class="py-2 px-4 rounded-lg flex items-center gap-2 bg-yellow-500 text-black hover:bg-yellow-600">
+                        <i class="fab fa-paypal"></i> PayPal
+                    </a>
+                </div>
+                <div class="contact-image">
+                    <a href='https://postimg.cc/bZ5RjRM5' target='_blank'>
+                        <img src='https://i.postimg.cc/9fmgZ8Bc/Picsart-24-12-05-18-22-21-740.png' alt='Contact Image'/>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <footer class="bg-black text-center py-4">
+        <p>&copy; ThunderTV 2024 - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://pagos.wompi.sv/js/wompi.pagos.js"></script>
+</body>
+</html>
