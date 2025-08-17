@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Planes Thunder</title>
+  <!-- SDK de PayPal -->
   <script src="https://www.paypal.com/sdk/js?client-id=sb&components=buttons"></script>
+  <!-- TailwindCSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-900 text-white font-sans">
@@ -19,7 +21,7 @@
   <section class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8">
     
     <!-- Plan Básico -->
-    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center">
+    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
       <h2 class="text-2xl font-semibold">Básico</h2>
       <p class="mt-4 text-4xl font-bold">$6</p>
       <p class="text-gray-400 mt-2">1 Pantalla | HD</p>
@@ -31,11 +33,10 @@
           hostedButtonId: "MWVAFZSQ7HK86",
         }).render("#paypal-container-MWVAFZSQ7HK86")
       </script>
-
     </div>
 
     <!-- Plan Estándar -->
-    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center">
+    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
       <h2 class="text-2xl font-semibold">Estándar</h2>
       <p class="mt-4 text-4xl font-bold">$8</p>
       <p class="text-gray-400 mt-2">2 Pantallas | Full HD</p>
@@ -47,11 +48,10 @@
           hostedButtonId: "YK9VF52WZAJ9N",
         }).render("#paypal-container-YK9VF52WZAJ9N")
       </script>
-
     </div>
 
     <!-- Plan Premium -->
-    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center">
+    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
       <h2 class="text-2xl font-semibold">Premium</h2>
       <p class="mt-4 text-4xl font-bold">$11</p>
       <p class="text-gray-400 mt-2">4 Pantallas | Ultra HD</p>
@@ -63,7 +63,6 @@
           hostedButtonId: "JCK2ZUDFBX5C8",
         }).render("#paypal-container-JCK2ZUDFBX5C8")
       </script>
-
     </div>
 
   </section>
@@ -71,7 +70,7 @@
   <!-- Botón WhatsApp -->
   <div class="text-center py-8">
     <a href="https://wa.link/thunder" target="_blank" 
-       class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition">
+       class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition transform hover:scale-110">
       💬 Contáctanos en WhatsApp
     </a>
   </div>
