@@ -1,3 +1,13 @@
+¡Ya entendí, Thunder ⚡!
+El detalle es que en el último código solo puse **header, planes y WhatsApp**, pero nunca agregué un `footer` ni otros bloques extra. Eso hace que se vea como “incompleto”.
+
+Aquí te paso el **código completo mejorado**, con:
+✅ Header
+✅ Sección de planes con PayPal
+✅ Botón WhatsApp
+✅ Footer con tus datos o un aviso tipo Netflix
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,71 +19,87 @@
   <!-- TailwindCSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-gray-900 text-white font-sans flex flex-col min-h-screen">
 
   <!-- Encabezado -->
   <header class="text-center py-8 bg-gray-800 shadow-lg">
     <h1 class="text-4xl font-bold">Planes Thunder</h1>
-    <p class="text-gray-400 mt-2">Elige tu plan favorito y disfruta contenido sin límites</p>
+    <p class="text-gray-400 mt-2">Elige tu plan y disfruta contenido sin límites</p>
   </header>
 
-  <!-- Planes -->
-  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8">
-    
-    <!-- Plan Básico -->
-    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-      <h2 class="text-2xl font-semibold">Básico</h2>
-      <p class="mt-4 text-4xl font-bold">$6</p>
-      <p class="text-gray-400 mt-2">1 Pantalla | HD</p>
+  <!-- Contenido principal -->
+  <main class="flex-grow">
+    <!-- Planes -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8">
       
-      <!-- PayPal Básico -->
-      <div id="paypal-container-MWVAFZSQ7HK86" class="mt-6"></div>
-      <script>
-        paypal.HostedButtons({
-          hostedButtonId: "MWVAFZSQ7HK86",
-        }).render("#paypal-container-MWVAFZSQ7HK86")
-      </script>
+      <!-- Plan Básico -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+        <h2 class="text-2xl font-semibold">Básico</h2>
+        <p class="mt-4 text-4xl font-bold">$6</p>
+        <p class="text-gray-400 mt-2">1 Pantalla | HD</p>
+        <!-- PayPal Básico -->
+        <div id="paypal-container-MWVAFZSQ7HK86" class="mt-6"></div>
+      </div>
+
+      <!-- Plan Estándar -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+        <h2 class="text-2xl font-semibold">Estándar</h2>
+        <p class="mt-4 text-4xl font-bold">$8</p>
+        <p class="text-gray-400 mt-2">2 Pantallas | Full HD</p>
+        <!-- PayPal Estándar -->
+        <div id="paypal-container-YK9VF52WZAJ9N" class="mt-6"></div>
+      </div>
+
+      <!-- Plan Premium -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+        <h2 class="text-2xl font-semibold">Premium</h2>
+        <p class="mt-4 text-4xl font-bold">$11</p>
+        <p class="text-gray-400 mt-2">4 Pantallas | Ultra HD</p>
+        <!-- PayPal Premium -->
+        <div id="paypal-container-JCK2ZUDFBX5C8" class="mt-6"></div>
+      </div>
+
+    </section>
+
+    <!-- Botón WhatsApp -->
+    <div class="text-center py-8">
+      <a href="https://wa.link/thunder" target="_blank" 
+        class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition transform hover:scale-110">
+        💬 Contáctanos en WhatsApp
+      </a>
     </div>
+  </main>
 
-    <!-- Plan Estándar -->
-    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-      <h2 class="text-2xl font-semibold">Estándar</h2>
-      <p class="mt-4 text-4xl font-bold">$8</p>
-      <p class="text-gray-400 mt-2">2 Pantallas | Full HD</p>
-      
-      <!-- PayPal Estándar -->
-      <div id="paypal-container-YK9VF52WZAJ9N" class="mt-6"></div>
-      <script>
-        paypal.HostedButtons({
-          hostedButtonId: "YK9VF52WZAJ9N",
-        }).render("#paypal-container-YK9VF52WZAJ9N")
-      </script>
-    </div>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-center py-6 mt-8">
+    <p class="text-gray-400 text-sm">© 2025 ThunderLA. Todos los derechos reservados.</p>
+    <p class="text-gray-500 text-xs mt-2">Este sitio no está afiliado a Netflix ni a ninguna plataforma oficial de streaming.</p>
+  </footer>
 
-    <!-- Plan Premium -->
-    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-      <h2 class="text-2xl font-semibold">Premium</h2>
-      <p class="mt-4 text-4xl font-bold">$11</p>
-      <p class="text-gray-400 mt-2">4 Pantallas | Ultra HD</p>
-      
-      <!-- PayPal Premium -->
-      <div id="paypal-container-JCK2ZUDFBX5C8" class="mt-6"></div>
-      <script>
-        paypal.HostedButtons({
-          hostedButtonId: "JCK2ZUDFBX5C8",
-        }).render("#paypal-container-JCK2ZUDFBX5C8")
-      </script>
-    </div>
+  <!-- Scripts de PayPal -->
+  <script>
+    paypal.HostedButtons({
+      hostedButtonId: "MWVAFZSQ7HK86",
+    }).render("#paypal-container-MWVAFZSQ7HK86");
 
-  </section>
+    paypal.HostedButtons({
+      hostedButtonId: "YK9VF52WZAJ9N",
+    }).render("#paypal-container-YK9VF52WZAJ9N");
 
-  <!-- Botón WhatsApp -->
-  <div class="text-center py-8">
-    <a href="https://wa.link/thunder" target="_blank" 
-       class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition transform hover:scale-110">
-      💬 Contáctanos en WhatsApp
-    </a>
-  </div>
+    paypal.HostedButtons({
+      hostedButtonId: "JCK2ZUDFBX5C8",
+    }).render("#paypal-container-JCK2ZUDFBX5C8");
+  </script>
 
 </body>
 </html>
+```
+
+👉 Con este ya tendrás:
+
+* **Header** arriba con título.
+* **Planes con PayPal** en el centro.
+* **Botón de WhatsApp** abajo del contenido.
+* **Footer real** con derechos y un disclaimer.
+
+¿Quieres que el **footer quede fijo al fondo de la pantalla** (aunque no haya mucho contenido), o prefieres que baje solo cuando el contenido se alargue?
