@@ -1,85 +1,130 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Planes Thunder</title>
-  <!-- SDK de PayPal -->
-  <script src="https://www.paypal.com/sdk/js?client-id=sb&components=buttons"></script>
-  <!-- TailwindCSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-900 text-white font-sans flex flex-col min-h-screen">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ThunderTV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Encabezado -->
-  <header class="text-center py-8 bg-gray-800 shadow-lg">
-    <h1 class="text-4xl font-bold">Planes Thunder</h1>
-    <p class="text-gray-400 mt-2">Elige tu plan y disfruta contenido sin límites</p>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .announcement-bar span { 
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll 25s linear infinite;
+    }
+    @keyframes scroll {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- Announcement -->
+  <div class="announcement-bar bg-red-600 text-white font-bold py-2 overflow-hidden whitespace-nowrap relative">
+    <span class="text-lg">🔥 THUNDER TV: entretenimiento familiar y adulto. Solicita tu prueba sin compromiso en WhatsApp 📲</span>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-black via-red-900/40 to-black text-center py-12 relative">
+    <div class="absolute top-5 left-5">
+      <img src="https://i.postimg.cc/Px5xhf7p/Picsart-25-08-16-18-29-45-676.png" class="w-20 rounded-xl shadow-md"/>
+    </div>
+    <h1 class="text-5xl font-extrabold text-red-600 tracking-wide">Thunder<span class="text-white">TV</span></h1>
+    <p class="mt-2 text-gray-300 text-lg">La mejor experiencia en entretenimiento</p>
+    <div class="mt-8 flex justify-center">
+      <img src="https://i.postimg.cc/636BzF3b/GIF-20250809-173608-608.gif" class="w-[550px] rounded-lg shadow-lg border border-gray-700"/>
+    </div>
   </header>
 
-  <!-- Contenido principal -->
-  <main class="flex-grow">
-    <!-- Planes -->
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8">
-      
-      <!-- Plan Básico -->
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-        <h2 class="text-2xl font-semibold">Básico</h2>
-        <p class="mt-4 text-4xl font-bold">$6</p>
-        <p class="text-gray-400 mt-2">1 Pantalla | HD</p>
-        <!-- PayPal Básico -->
-        <div id="paypal-container-MWVAFZSQ7HK86" class="mt-6"></div>
-      </div>
+  <!-- Pricing -->
+  <main class="p-8">
+    <section>
+      <h2 class="text-red-500 text-3xl font-bold text-center mb-10">📺 Planes Mensuales</h2>
+      <div class="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
 
-      <!-- Plan Estándar -->
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-        <h2 class="text-2xl font-semibold">Estándar</h2>
-        <p class="mt-4 text-4xl font-bold">$8</p>
-        <p class="text-gray-400 mt-2">2 Pantallas | Full HD</p>
-        <!-- PayPal Estándar -->
-        <div id="paypal-container-YK9VF52WZAJ9N" class="mt-6"></div>
-      </div>
+        <!-- Básico -->
+        <div class="bg-zinc-900 border border-gray-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300">
+          <h3 class="text-red-500 text-2xl font-bold mb-2">BÁSICO</h3>
+          <p class="text-3xl font-extrabold mb-4">$6 <span class="text-lg">USD</span></p>
+          <ul class="space-y-1 text-gray-300 mb-4">
+            <li>✔ 1 dispositivo</li>
+            <li>✔ Canales SD, HD y FHD</li>
+            <li>✔ Series y Películas</li>
+            <li>✔ Canales + adultos</li>
+            <li>✔ Eventos PPV</li>
+          </ul>
+          <a href="https://paypal.me/ThunderLA/6" target="_blank" class="w-full flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black py-2 px-4 rounded-lg shadow-md transition">
+            <i class="fab fa-paypal"></i> Pagar con PayPal
+          </a>
+        </div>
 
-      <!-- Plan Premium -->
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-        <h2 class="text-2xl font-semibold">Premium</h2>
-        <p class="mt-4 text-4xl font-bold">$11</p>
-        <p class="text-gray-400 mt-2">4 Pantallas | Ultra HD</p>
-        <!-- PayPal Premium -->
-        <div id="paypal-container-JCK2ZUDFBX5C8" class="mt-6"></div>
-      </div>
+        <!-- Standard -->
+        <div class="bg-gradient-to-b from-red-900/40 to-zinc-900 border-2 border-red-600 rounded-2xl p-6 shadow-2xl hover:scale-105 transition-transform duration-300 relative">
+          <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">Recomendado</span>
+          <h3 class="text-red-500 text-2xl font-bold mb-2">STANDARD</h3>
+          <p class="text-3xl font-extrabold mb-4">$8 <span class="text-lg">USD</span></p>
+          <ul class="space-y-1 text-gray-300 mb-4">
+            <li>✔ 3 dispositivos</li>
+            <li>✔ Canales SD, HD y FHD</li>
+            <li>✔ Series y Películas</li>
+            <li>✔ Canales + adultos</li>
+            <li>✔ Eventos PPV</li>
+          </ul>
+          <a href="https://paypal.me/ThunderLA/8" target="_blank" class="w-full flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black py-2 px-4 rounded-lg shadow-md transition">
+            <i class="fab fa-paypal"></i> Pagar con PayPal
+          </a>
+        </div>
 
+        <!-- Premium -->
+        <div class="bg-zinc-900 border border-gray-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300">
+          <h3 class="text-red-500 text-2xl font-bold mb-2">FULL PREMIUM</h3>
+          <p class="text-3xl font-extrabold mb-4">$11 <span class="text-lg">USD</span></p>
+          <ul class="space-y-1 text-gray-300 mb-4">
+            <li>✔ 4 dispositivos</li>
+            <li>✔ Canales SD, HD y FHD</li>
+            <li>✔ Series y Películas</li>
+            <li>✔ Canales + adultos</li>
+            <li>✔ Eventos PPV</li>
+          </ul>
+          <a href="https://paypal.me/ThunderLA/11" target="_blank" class="w-full flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black py-2 px-4 rounded-lg shadow-md transition">
+            <i class="fab fa-paypal"></i> Pagar con PayPal
+          </a>
+        </div>
+
+      </div>
     </section>
 
-    <!-- Botón WhatsApp -->
-    <div class="text-center py-8">
-      <a href="https://wa.link/thunder" target="_blank" 
-        class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition transform hover:scale-110">
-        💬 Contáctanos en WhatsApp
-      </a>
-    </div>
+    <!-- Contact -->
+    <section class="mt-16 text-center">
+      <h2 class="text-red-500 text-3xl font-bold mb-6">📞 Contáctanos</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://wa.link/thunder" target="_blank" class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-xl shadow-md transition">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://t.me/dev0TH" target="_blank" class="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-xl shadow-md transition">
+          <i class="fab fa-telegram"></i> Telegram
+        </a>
+        <a href="https://paypal.me/ThunderLA" target="_blank" class="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black py-2 px-6 rounded-xl shadow-md transition">
+          <i class="fab fa-paypal"></i> PayPal
+        </a>
+      </div>
+      <div class="mt-6 flex justify-center">
+        <img src="https://i.postimg.cc/9fmgZ8Bc/Picsart-24-12-05-18-22-21-740.png" class="w-64 rounded-lg shadow-lg"/>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-center py-6 mt-8">
-    <p class="text-gray-400 text-sm">© 2025 ThunderLA. Todos los derechos reservados.</p>
-    <p class="text-gray-500 text-xs mt-2">Este sitio no está afiliado a Netflix ni a ninguna plataforma oficial de streaming.</p>
+  <footer class="mt-16 bg-gradient-to-r from-black via-zinc-900 to-black py-6 text-center text-gray-400">
+    <p>&copy; 2024 ThunderTV - Todos los derechos reservados</p>
+    <div class="mt-2 flex justify-center gap-4 text-xl">
+      <a href="#" class="hover:text-red-500"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="hover:text-red-500"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="hover:text-red-500"><i class="fab fa-twitter"></i></a>
+    </div>
   </footer>
-
-  <!-- Scripts de PayPal -->
-  <script>
-    paypal.HostedButtons({
-      hostedButtonId: "MWVAFZSQ7HK86",
-    }).render("#paypal-container-MWVAFZSQ7HK86");
-
-    paypal.HostedButtons({
-      hostedButtonId: "YK9VF52WZAJ9N",
-    }).render("#paypal-container-YK9VF52WZAJ9N");
-
-    paypal.HostedButtons({
-      hostedButtonId: "JCK2ZUDFBX5C8",
-    }).render("#paypal-container-JCK2ZUDFBX5C8");
-  </script>
-
 </body>
 </html>
